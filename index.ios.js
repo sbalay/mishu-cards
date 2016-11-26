@@ -19,15 +19,11 @@ export default class AwesomeProject extends Component {
           pagingEnabled={true}
           style={styles.scrollview}
         >
-          <View style={styles.view}>
-            <Text> Mishu </Text>
-          </View>
-          <View style={styles.view}>
-            <Text> Mishu </Text>
-          </View>
-          <View style={styles.view}>
-            <Text> Mishu </Text>
-          </View>
+          <View style={styles.view} />
+          <View style={styles.view} />
+          <View style={styles.view} />
+          <View style={styles.view} />
+          <View style={styles.view} />
         </ScrollView>
       </View>
     );

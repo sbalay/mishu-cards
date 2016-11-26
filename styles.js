@@ -2,6 +2,8 @@
 import { Dimensions, StyleSheet} from 'react-native';
 
 const width = Dimensions.get('window').width;
+const cardWidth = width - 40;
+const cardHorizontalMargin = 5;
 
 export default StyleSheet.create({
   container: {
@@ -14,7 +16,7 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: 'red',
     overflow: 'visible',
-    width: width - 80
+    width: cardWidth + cardHorizontalMargin * 2
   },
   scrollviewContent: {
     alignItems: 'center',
@@ -24,7 +26,7 @@ export default StyleSheet.create({
   view: {
     backgroundColor: 'blue',
     height: 200,
-    marginHorizontal: 20,
-    width: width - 120
+    marginHorizontal: cardHorizontalMargin,
+    width: cardWidth
   }
 });
