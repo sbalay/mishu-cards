@@ -5,27 +5,27 @@
  */
 
 import React, { Component } from 'react';
-import { AppRegistry, Dimensions, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { AppRegistry, ScrollView, StyleSheet, Text, View } from 'react-native';
 
-const width = Dimensions.get('window').width;
+import styles from './styles';
 
 export default class AwesomeProject extends Component {
   render() {
     return (
-      <View style={{ alignItems: 'center', backgroundColor: 'green', justifyContent: 'center', flex: 1 }}>
+      <View style={styles.container}>
         <ScrollView
-          contentContainerStyle={styles.view}
+          contentContainerStyle={styles.scrollviewContent}
           horizontal={true}
           pagingEnabled={true}
           style={styles.scrollview}
         >
-          <View style={styles.viewtext}>
+          <View style={styles.view}>
             <Text> Mishu </Text>
           </View>
-          <View style={styles.viewtext}>
+          <View style={styles.view}>
             <Text> Mishu </Text>
           </View>
-          <View style={styles.viewtext}>
+          <View style={styles.view}>
             <Text> Mishu </Text>
           </View>
         </ScrollView>
@@ -33,25 +33,5 @@ export default class AwesomeProject extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  scrollview: {
-    flex: 1,
-    backgroundColor: 'red',
-    overflow: 'visible',
-    width: width - 80
-  },
-  view: {
-    alignItems: 'center',
-    flexDirection: 'row',
-    justifyContent: 'center',
-  },
-  viewtext: {
-    backgroundColor: 'blue',
-    height: 200,
-    marginHorizontal: 20,
-    width: width - 120
-  }
-});
 
 AppRegistry.registerComponent('AwesomeProject', () => AwesomeProject);
